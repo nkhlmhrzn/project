@@ -11,3 +11,16 @@ def homepage(request):
     return render(request,'home.html',{
         "management":management
     })
+
+def addpage(request):
+    if request.method == 'POST':
+        print(request.POST['name'],
+            request.POST['group'],
+            request.POST['capacity'])
+        models.management.objects.create(
+            name = request.POST['name'],
+            group = request.POST['group'],
+            capacity = request.POST['capacity']
+            )
+        return redirect(reverse ('management:homepage'))
+    return render(request,'add.html')
