@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{%load static %}
+{% block content %}
+    <div class="homeHead">
+        <h1 class="headText">BLOOD BANK</h1>
+    </div>
+    <div class="homeContent">
+        <div class="img-container">
+            <img src="{% static 'images/homeImg.png' %}" alt="banner">
+        </div>
+        <div class="homeBtn">
+            <a href="{%url 'management:'%}" id="availBTn">AVAILABLE BLOOD</a>
+            <a href="{%url 'management:'%}" id="listBtn">LIST</a>
+            <a href="{%url 'management:'%}" id="dbBtn">DASHBOARD</a>
+
+        </div>
+    </div>
+{% endblock %} 
