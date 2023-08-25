@@ -1,7 +1,7 @@
 from django.db import models
 
 class management(models.Model):
-    group = models.IntegerField()
+    group = models.CharField(max_length=3)
     name = models.CharField(max_length=50)
     capacity = models.IntegerField()
 
